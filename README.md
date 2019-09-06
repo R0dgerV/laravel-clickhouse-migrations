@@ -1,7 +1,8 @@
-# Clickhouse DB migrations for Laravel
+# Clickhouse DB migrations for Laravel / Lumen
 
 ClickHouse is an open source column-oriented database management system capable of real time generation of analytical data reports using SQL queries.
-Library is suitable for Laravel.
+
+Library is suitable for Laravel / Lumen.
 
 ## Installing
 
@@ -36,13 +37,17 @@ Example for clickhouse and migrations settings:
 ```
 
 ### Register provider
-
+####Laravel
 ```php
 'providers' => [
     ...
     \Sagirba\ClickhouseMigrations\ClickhouseProvider::class,
     ...
 ],
+```
+####Lumen
+```php
+$app->register(Sagirba\ClickhouseMigrations\ClickhouseProvider::class);
 ```
 
 ## Usage
