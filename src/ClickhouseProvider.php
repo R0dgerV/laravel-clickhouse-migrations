@@ -34,7 +34,7 @@ class ClickhouseProvider extends \Illuminate\Support\ServiceProvider
      */
     public function provides()
     {
-        return 'serkarn-clickhouse';
+        return 'sagirba-clickhouse';
     }
     
 }

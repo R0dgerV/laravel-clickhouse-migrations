@@ -1,6 +1,6 @@
 <?php
 
-class {FILE_NAME} extends \Serkarn\ClickhouseMigrations\Migrations\BaseMigration
+class {FILE_NAME} extends \Sagirba\ClickhouseMigrations\Migrations\BaseMigration
 {
     
     /**

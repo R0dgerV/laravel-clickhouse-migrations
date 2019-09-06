@@ -1,6 +1,6 @@
 <?php
 
-namespace Serkarn\ClickhouseMigrations\Migrations;
+namespace Sagirba\ClickhouseMigrations\Migrations;
 
 class ClickhouseModel
 {
@@ -106,7 +106,7 @@ class ClickhouseModel
      */
     protected function getClient(): \ClickHouseDB\Client
     {
-        return \Serkarn\ClickhouseMigrations\Clickhouse::client();
+        return \Sagirba\ClickhouseMigrations\Clickhouse::client();
     }
     
 }

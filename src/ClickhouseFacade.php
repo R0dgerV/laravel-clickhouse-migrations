@@ -1,6 +1,6 @@
 <?php
 
-namespace Serkarn\ClickhouseMigrations;
+namespace Sagirba\ClickhouseMigrations;
 
 class ClickhouseFacade extends \Illuminate\Support\Facades\Facade
 {
@@ -12,7 +12,7 @@ class ClickhouseFacade extends \Illuminate\Support\Facades\Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'serkarn-clickhouse';
+        return 'sagirba-clickhouse';
     }
     
 }

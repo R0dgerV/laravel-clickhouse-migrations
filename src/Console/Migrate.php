@@ -1,49 +1,71 @@
 <?php
 
-namespace Serkarn\ClickhouseMigrations\Console;
+namespace Sagirba\ClickhouseMigrations\Console;
 
 class Migrate extends \Illuminate\Console\Command
 {
-    
+
     /**
      *
      * @var string
      */
     protected $signature = 'clickhouse:migrate {--down} {--y}';
-    
+
     /**
      *
      * @var string
      */
     protected $description = 'Clickhouse migrations';
-    
+
     /**
      *
-     * @var \Serkarn\ClickhouseMigrations\Migrations\MigrationService
+     * @var \Sagirba\ClickhouseMigrations\Migrations\MigrationService
      */
     protected $migrationService;
 
     /**
-     * 
+     *
      * Class constructor
      */
     public function __construct()
     {
         parent::__construct();
-        $this->migrationService = new \Serkarn\ClickhouseMigrations\Migrations\MigrationService();
+        $this->migrationService = new \Sagirba\ClickhouseMigrations\Migrations\MigrationService();
     }
 
     /**
-     * 
+     *
      * @return bool
      */
     public function handle(): bool
     {
         return $this->option('down') ? $this->down() : $this->up();
     }
-    
+
     /**
-     * 
+     *
+     * @return bool
+     */
+    protected function down(): bool
+    {
+        $migration = $this->migrationService->getLastAppliedMigration();
+        if (is_null($migration)) {
+            $this->info('There are no applied migrations');
+            return true;
+        }
+        $this->info(
+            'Migration:' . "\n" .
+            "\t" . $migration
+        );
+        if (!$this->option('y') && !$this->confirm('Are you sure?')) {
+            return true;
+        }
+        $this->migrationService->down($migration);
+        return true;
+    }
+
+    /**
+     *
      * @return bool
      */
     protected function up(): bool
@@ -54,8 +76,8 @@ class Migrate extends \Illuminate\Console\Command
             return true;
         }
         $this->info(
-                'Migrations:' . "\n\t" .
-                $nonAppliedMigrations->implode("\n\t")
+            'Migrations:' . "\n\t" .
+            $nonAppliedMigrations->implode("\n\t")
         );
         if (!$this->option('y') && !$this->confirm('Do you wish to apply?')) {
             return true;
@@ -67,27 +89,5 @@ class Migrate extends \Illuminate\Console\Command
         }
         return true;
     }
-    
-    /**
-     * 
-     * @return bool
-     */
-    protected function down(): bool
-    {
-        $migration = $this->migrationService->getLastAppliedMigration();
-        if (is_null($migration)) {
-            $this->info('There are no applied migrations');
-            return true;
-        }
-        $this->info(
-                'Migration:' . "\n" .
-                "\t" . $migration
-        );
-        if (!$this->option('y') && !$this->confirm('Are you sure?')) {
-            return true;
-        }
-        $this->migrationService->down($migration);
-        return true;
-    }
-    
+
 }

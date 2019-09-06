@@ -1,6 +1,6 @@
 <?php
 
-namespace Serkarn\ClickhouseMigrations\Migrations;
+namespace Sagirba\ClickhouseMigrations\Migrations;
 
 class FileModel
 {

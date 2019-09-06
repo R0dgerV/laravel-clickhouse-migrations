@@ -1,6 +1,6 @@
 <?php
 
-namespace Serkarn\ClickhouseMigrations\Migrations;
+namespace Sagirba\ClickhouseMigrations\Migrations;
 
 abstract class BaseMigration implements MigrationInterface
 {
@@ -11,7 +11,7 @@ abstract class BaseMigration implements MigrationInterface
      */
     protected function getClient(): \ClickHouseDB\Client
     {
-        return \Serkarn\ClickhouseMigrations\Clickhouse::client();
+        return \Sagirba\ClickhouseMigrations\Clickhouse::client();
     }
     
 }

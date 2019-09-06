@@ -40,7 +40,7 @@ Example for clickhouse and migrations settings:
 ```php
 'providers' => [
     ...
-    \Serkarn\ClickhouseMigrations\ClickhouseProvider::class,
+    \Sagirba\ClickhouseMigrations\ClickhouseProvider::class,
     ...
 ],
 ```

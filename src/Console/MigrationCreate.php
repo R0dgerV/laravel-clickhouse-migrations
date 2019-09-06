@@ -1,6 +1,6 @@
 <?php
 
-namespace Serkarn\ClickhouseMigrations\Console;
+namespace Sagirba\ClickhouseMigrations\Console;
 
 class MigrationCreate extends \Illuminate\Console\Command
 {
@@ -23,7 +23,7 @@ class MigrationCreate extends \Illuminate\Console\Command
      */
     public function handle()
     {
-        $migrationService = new \Serkarn\ClickhouseMigrations\Migrations\MigrationService();
+        $migrationService = new \Sagirba\ClickhouseMigrations\Migrations\MigrationService();
         if ($migrationService->create($this->argument('name'))) {
             $this->info('Migration created successfully');
         }
