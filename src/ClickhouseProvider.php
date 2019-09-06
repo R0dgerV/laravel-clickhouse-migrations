@@ -1,6 +1,6 @@
 <?php
 
-namespace Serkarn\ClickhouseMigrations;
+namespace Sagirba\ClickhouseMigrations;
 
 class ClickhouseProvider extends \Illuminate\Support\ServiceProvider
 {
