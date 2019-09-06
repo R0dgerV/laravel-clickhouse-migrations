@@ -6,7 +6,7 @@ Library is suitable for Laravel.
 ## Installing
 
 ```bash
-composer require serkarn/laravel-clickhouse-migrations
+composer require sagirba/clickhouse-migrations
 ```
 
 ## Usage
