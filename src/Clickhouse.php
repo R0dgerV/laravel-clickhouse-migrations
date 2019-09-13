@@ -18,6 +18,7 @@ class Clickhouse implements ClickhouseInterface
     public static function client(): \ClickHouseDB\Client
     {
         $config = app()->make('config')->get('database.clickhouse', []);
+        $database = $config['options']['database'];
         if (is_null(self::$client)) {
             $options = [];
             if (isset($config['options'])) {
@@ -36,7 +37,7 @@ class Clickhouse implements ClickhouseInterface
                 self::$client->$method($value);
             }
         }
-        self::$client->database($config['options']['database']);
+        self::$client->database($database);
         return self::$client;
     }
     
