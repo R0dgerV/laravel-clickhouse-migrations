@@ -11,11 +11,11 @@
     "type": "library",
     "minimum-stability": "dev",
     "require": {
-        "php": "^7.1.3",
+        "php": "^7.2",
         "smi2/phpclickhouse": "^1.3",
-        "illuminate/console": "^5.7",
-        "illuminate/support": "^5.7",
-        "illuminate/contracts": "^5.7",
+        "illuminate/console": "^6.0",
+        "illuminate/support": "^6.0",
+        "illuminate/contracts": "^6.0",
         "league/flysystem": "^1.0.8",
         "symfony/finder": "^4.1"
     },
