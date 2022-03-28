@@ -12,7 +12,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.4|^8.0",
-        "illuminate/support": "8.*|9.*"
+        "illuminate/support": "8.*|9.*",
         "illuminate/console": "8.*|9.*",
         "illuminate/contracts": "8.*|9.*",
         "smi2/phpclickhouse": "^1.3",
