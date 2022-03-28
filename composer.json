@@ -1,5 +1,5 @@
 {
-    "name": "sagirba/clickhouse-migrations",
+    "name": "rodger/clickhouse-migrations",
     "description": "Clickhouse migrations for laravel/lumen",
     "keywords": [
         "laravel",
@@ -13,9 +13,9 @@
     "require": {
         "php": ">=7.4",
         "smi2/phpclickhouse": "^1.3",
-        "illuminate/console": "^8.0",
-        "illuminate/support": "^8.0",
-        "illuminate/contracts": "^8.0",
+        "illuminate/console": "^8.0|^9.0",
+        "illuminate/support": "^8.0|^9.0",
+        "illuminate/contracts": "^8.0|^9.0",
         "league/flysystem": "^1.0.8",
         "symfony/finder": "^5.0"
     },
