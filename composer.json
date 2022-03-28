@@ -11,13 +11,13 @@
     "type": "library",
     "minimum-stability": "dev",
     "require": {
-        "php": ">=7.2|^8.0",
-        "illuminate/support": "8.*|9.*",
-        "illuminate/console": "8.*|9.*",
-        "illuminate/contracts": "8.*|9.*",
+        "php": ">=8.0",
+        "illuminate/support": "9.*",
+        "illuminate/console": "9.*",
+        "illuminate/contracts": "9.*",
         "smi2/phpclickhouse": "^1.3",
-        "league/flysystem": "^1.0.8",
-        "symfony/finder": "^5.0"
+        "league/flysystem": "^3.0.12",
+        "symfony/finder": "^6.0.3"
     },
     "license": "MIT",
     "autoload": {
